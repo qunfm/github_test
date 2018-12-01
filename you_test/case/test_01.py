@@ -9,7 +9,7 @@ class Test(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         time.sleep(2)
-        print("end!")
+        print("end!jj")
 
     def test01(self):
         u'''测试登录用例，账号：xx 密码xx'''  #报告中的注释
