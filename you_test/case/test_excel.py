@@ -10,7 +10,7 @@ class ExcelUtil():
         self.colNum = self.table.ncols
     def dict_data(self):
         if self.rowNum <=1:
-            print("total rowNum <1")
+            print("total rowNum   <1")
         else:
             r = []
             j = 1

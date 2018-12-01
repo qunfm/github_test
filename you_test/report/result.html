@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>自动化测试报告,测试结果如下：</h1>
-<p class='attribute'><strong>Start Time:</strong> 2018-12-01 19:57:49</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:05.179336</p>
-<p class='attribute'><strong>Status:</strong> Pass 14 Failure 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2018-12-01 20:26:03</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:05.248767</p>
+<p class='attribute'><strong>Status:</strong> Pass 14 Failure 1 Error 1</p>
 
 <p class='description'>用例执行情况：</p>
 </div>
@@ -470,21 +470,64 @@ end...
     </td>
 </tr>
 
+<tr class='errorClass'>
+    <td>unittest.loader.ModuleImportFailure</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c3',1)">Detail</a></td>
+</tr>
+
+<tr id='ft3.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_mock</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.1')" >
+        error</a>
+
+    <div id='div_ft3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.1: ImportError: Failed to import test module: test_mock
+Traceback (most recent call last):
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/loader.py", line 254, in _find_tests
+    module = self._get_module_from_name(name)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/loader.py", line 232, in _get_module_from_name
+    __import__(name)
+  File "/Users/mqf/PycharmProjects/github_test/you_test/case/test_mock.py", line 7, in &lt;module&gt;
+    from mock_1.modular import *
+ImportError: No module named mock_1.modular
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
 <tr class='passClass'>
     <td>test_02.BlogHome: 博客首页</td>
     <td>2</td>
     <td>2</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c3',2)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c4',2)">Detail</a></td>
 </tr>
 
-<tr id='pt3.1' class='hiddenRow'>
+<tr id='pt4.1' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_01</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt3.2' class='hiddenRow'>
+<tr id='pt4.2' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_02</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
@@ -495,40 +538,40 @@ end...
     <td>3</td>
     <td>1</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c4',4)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c5',4)">Detail</a></td>
 </tr>
 
-<tr id='pt4.1' class='hiddenRow'>
+<tr id='pt5.1' class='hiddenRow'>
     <td class='none'><div class='testcase'>test01: assert a==b</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt4.2' class='hiddenRow'>
+<tr id='pt5.2' class='hiddenRow'>
     <td class='none'><div class='testcase'>test02: assert a in b</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt4.3' class='hiddenRow'>
+<tr id='pt5.3' class='hiddenRow'>
     <td class='none'><div class='testcase'>test03: a is true</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='ft4.4' class='none'>
+<tr id='ft5.4' class='none'>
     <td class='failCase'><div class='testcase'>test04: failed case</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.4')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.4')" >
         fail</a>
 
-    <div id='div_ft4.4' class="popup_window">
+    <div id='div_ft5.4' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.4').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.4').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft4.4: Traceback (most recent call last):
+ft5.4: Traceback (most recent call last):
   File "/Users/mqf/PycharmProjects/github_test/you_test/case/test_assert.py", line 22, in test04
     self.assertEqual(a,b)
 AssertionError: 'lix' != 'yoy'
@@ -543,10 +586,10 @@ AssertionError: 'lix' != 'yoy'
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>15</td>
+    <td>16</td>
     <td>14</td>
     <td>1</td>
-    <td>0</td>
+    <td>1</td>
     <td>&nbsp;</td>
 </tr>
 </table>
