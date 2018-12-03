@@ -1,11 +1,11 @@
 #coding:utf-8
 import unittest
-import time.sleep
+import time
 from selenium import webdriver
 class Test_baidu(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
-        self.sleep(3)
+        time.sleep(3)
         self.url = "https://baidu.com"
     def tearDown(self):
         self.driver.quit()
